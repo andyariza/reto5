@@ -54,6 +54,12 @@ public class ServiciosReservacion implements Serializable{
                 if (reservacion.getStatus() != null) {
                     e.get().setStatus(reservacion.getStatus());
                 }
+                if (reservacion.getClient()!= null) {
+                    e.get().setClient(reservacion.getClient());
+                }
+                if (reservacion.getFarm()!= null) {
+                    e.get().setFarm(reservacion.getFarm());
+                }
                 metodosCrud.save(e.get());
                 return e.get();
             } else {
